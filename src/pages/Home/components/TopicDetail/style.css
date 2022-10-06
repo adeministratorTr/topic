@@ -1,0 +1,8 @@
+/* use variable/function for spacing */
+.more-space {
+  margin-bottom: 20px;
+}
+
+.less-space {
+  margin: 5px 0;
+}
