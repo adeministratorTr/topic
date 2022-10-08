@@ -6,9 +6,15 @@ const TopicDetail = ({ text, total, positive, neutral, negative }) => (
   <>
     <p className="more-space">Information on Topic: {`"${text}"`}</p>
     <p className="more-space">Total mentions: {total}</p>
-    <p className="less-space">Positive Mentions: {positive}</p>
-    <p className="less-space">Neutral Mentions: {neutral}</p>
-    <p className="less-space">Negative Mentions: {negative}</p>
+    <p className="detail">
+      Positive Mentions: <span className="positive">{positive}</span>
+    </p>
+    <p className="detail">
+      Neutral Mentions: <span className="neutral">{neutral}</span>
+    </p>
+    <p className="detail">
+      Negative Mentions: <span className="negative">{negative}</span>
+    </p>
   </>
 );
 

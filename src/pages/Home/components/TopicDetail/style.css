@@ -3,6 +3,18 @@
   margin-bottom: 20px;
 }
 
-.less-space {
+.detail {
   margin: 5px 0;
+}
+
+.positive {
+  color: #26c40e;
+}
+
+.neutral {
+  color: black;
+}
+
+.negative {
+  color: #ec1c36;
 }
