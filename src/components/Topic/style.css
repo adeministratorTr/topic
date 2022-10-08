@@ -1,5 +1,6 @@
 .topic-item {
   cursor: pointer;
+  margin: 10px;
 }
 
 .high {
@@ -12,4 +13,28 @@
 
 .low {
   color: red;
+}
+
+.popularity-1 {
+  font-size: xx-small;
+}
+
+.popularity-2 {
+  font-size: small;
+}
+
+.popularity-3 {
+  font-size: medium;
+}
+
+.popularity-4 {
+  font-size: large;
+}
+
+.popularity-5 {
+  font-size: x-large;
+}
+
+.popularity-6 {
+  font-size: xx-large;
 }

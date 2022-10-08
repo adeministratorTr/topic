@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { TagCloud } from 'react-tagcloud';
 
 import Topic from 'components/Topic';
 import TopicDetail from './components/TopicDetail';
@@ -16,28 +17,32 @@ export default function Home() {
     setTopics(mapTopics(result.topics));
   }, []);
 
+  const renderTopicItem = (topic) => (
+    <Topic key={topic.id} score={topic.sentiment.range} popularity={topic.popularity}>
+      {topic.value}
+    </Topic>
+  );
+
   return (
     <div>
-      <h1>Home page</h1>
+      <h1>My Topics</h1>
       <div className="home-page-container">
-        <div>
-          {Array.isArray(topics) &&
-            topics.length > 0 &&
-            topics.map((topic) => (
-              <Topic
-                key={topic.id}
-                score={topic.sentiment.range}
-                onClick={() => setSelectedTopic(topic)}
-              >
-                {topic.label}
-              </Topic>
-            ))}
+        <div className="topic-cloud-container">
+          {Array.isArray(topics) && topics.length > 0 && (
+            <TagCloud
+              tags={topics}
+              minSize={1}
+              maxSize={1}
+              renderer={(topic) => renderTopicItem(topic)}
+              onClick={(topic) => setSelectedTopic(topic)}
+            />
+          )}
         </div>
         <div className="topic-detail-container">
           {selectedTopic && selectedTopic.id && (
             <TopicDetail
-              text={selectedTopic.label}
-              total={selectedTopic.volume}
+              text={selectedTopic.value}
+              total={selectedTopic.count}
               positive={selectedTopic.sentiment.positive}
               neutral={selectedTopic.sentiment.neutral}
               negative={selectedTopic.sentiment.negative}

@@ -1,8 +1,14 @@
 .home-page-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.topic-cloud-container {
+  width: 900px;
 }
 
 .topic-detail-container {
-  width: 400px;
+  width: 500px;
+  padding-left: 50px;
+  text-align: left;
 }

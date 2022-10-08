@@ -2,20 +2,26 @@ import PropTypes from 'prop-types';
 
 import './style.css';
 
-const Topic = ({ onClick, children, score, ...rest }) => (
-  <p className={'topic-item ' + score} onClick={onClick} {...rest}>
+const Topic = ({ onClick, children, score, popularity, ...rest }) => (
+  <span
+    className={`topic-item ${score} popularity-${popularity}`}
+    onClick={onClick}
+    {...rest}
+  >
     {children}
-  </p>
+  </span>
 );
 
 Topic.defaultProps = {
-  score: 'normal'
+  score: 'normal',
+  popularity: 2
 };
 
 Topic.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
-  score: PropTypes.string
+  score: PropTypes.string,
+  popularity: PropTypes.number
 };
 
 export default Topic;
