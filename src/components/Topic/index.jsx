@@ -5,6 +5,7 @@ import './style.css';
 const Topic = ({ onClick, children, score, popularity, ...rest }) => (
   <span
     className={`topic-item ${score} popularity-${popularity}`}
+    data-testid="Topic"
     onClick={onClick}
     {...rest}
   >
