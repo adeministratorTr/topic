@@ -3,7 +3,7 @@ import './style.css';
 export default function Header() {
   return (
     <header className="header">
-      <p>My topics</p>
+      <p>Welcome</p>
     </header>
   );
 }
