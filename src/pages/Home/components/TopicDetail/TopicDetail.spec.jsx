@@ -13,6 +13,7 @@ describe('components/TopicDetail', () => {
     render(<TopicDetail {...props} />);
     const component = screen.getByTestId('TopicDetail');
     expect(component).toBeVisible();
+    expect(component.childElementCount).toBe(5);
     expect(component.childNodes[0]).toHaveTextContent(props.text);
     expect(component.childNodes[1]).toHaveTextContent(props.total);
     expect(component.childNodes[2]).toHaveTextContent(props.positive);
@@ -30,6 +31,7 @@ describe('components/TopicDetail', () => {
     const component = screen.getByTestId('TopicDetail');
 
     expect(component).toBeVisible();
+    expect(component.childElementCount).toBe(5);
     expect(component.childNodes[0]).toHaveTextContent(props.text);
     expect(component.childNodes[1]).toHaveTextContent(props.total);
     expect(component.childNodes[2]).toHaveTextContent(props.positive);
