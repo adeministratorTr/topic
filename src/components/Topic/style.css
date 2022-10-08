@@ -1,0 +1,15 @@
+.topic-item {
+  cursor: pointer;
+}
+
+.high {
+  color: green;
+}
+
+.normal {
+  color: grey;
+}
+
+.low {
+  color: red;
+}
