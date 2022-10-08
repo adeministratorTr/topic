@@ -1,4 +1,8 @@
-.container {
+.home-page-container {
   display: flex;
   justify-content: space-evenly;
+}
+
+.topic-detail-container {
+  width: 400px;
 }
