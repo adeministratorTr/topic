@@ -128,8 +128,8 @@ const sampleInput = [
     volume: 35,
     type: 'topic',
     sentiment: {
-      neutral: 18,
-      negative: 30
+      neutral: 15,
+      negative: 20
     },
     sentimentScore: 20,
     burst: 5,
@@ -178,7 +178,7 @@ const sampleInput = [
       {
         id: 1751295897,
         name: 'Berghain',
-        volume: 18
+        volume: 35
       }
     ]
   },
@@ -188,7 +188,7 @@ const sampleInput = [
     volume: 13,
     type: 'topic',
     sentiment: {
-      neutral: 3
+      neutral: 13
     },
     sentimentScore: 50,
     burst: 0,
@@ -237,7 +237,7 @@ const sampleInput = [
       {
         id: 1751295897,
         name: 'Berghain',
-        volume: 3
+        volume: 13
       }
     ]
   }
@@ -277,8 +277,8 @@ describe('mapper/mapTopic', () => {
         count: 35,
         popularity: 1,
         sentiment: {
-          neutral: 18,
-          negative: 30,
+          neutral: 15,
+          negative: 20,
           score: 20,
           range: 'low'
         }
@@ -289,7 +289,7 @@ describe('mapper/mapTopic', () => {
         count: 13,
         popularity: 1,
         sentiment: {
-          neutral: 3,
+          neutral: 13,
           score: 50,
           range: 'normal'
         }
