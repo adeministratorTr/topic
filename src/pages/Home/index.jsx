@@ -24,10 +24,10 @@ export default function Home() {
   );
 
   return (
-    <div>
+    <div data-testid="Home">
       <h1>My Topics</h1>
       <div className="home-page-container">
-        <div className="topic-cloud-container">
+        <div className="topic-cloud-container" data-testid="TopicList">
           {Array.isArray(topics) && topics.length > 0 && (
             <TagCloud
               tags={topics}
