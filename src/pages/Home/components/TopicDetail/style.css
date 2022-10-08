@@ -1,5 +1,5 @@
-/* use variable/function for spacing */
 .important {
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -8,7 +8,7 @@
 }
 
 .positive {
-  color: #26c40e;
+  color: green;
 }
 
 .neutral {
@@ -16,5 +16,5 @@
 }
 
 .negative {
-  color: #ec1c36;
+  color: red;
 }
