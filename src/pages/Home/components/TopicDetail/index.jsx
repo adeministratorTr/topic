@@ -4,8 +4,8 @@ import './style.css';
 
 const TopicDetail = ({ text, total, positive, neutral, negative }) => (
   <>
-    <p className="more-space">Information on Topic: {`"${text}"`}</p>
-    <p className="more-space">Total mentions: {total}</p>
+    <p className="important">Information on Topic{`"${text}":`}</p>
+    <p className="important">Total mentions: {total}</p>
     <p className="detail">
       Positive Mentions: <span className="positive">{positive}</span>
     </p>
