@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 const TopicDetail = ({ text, total, positive, neutral, negative }) => (
-  <>
+  <div data-testid="TopicDetail">
     <p className="important">Information on Topic{`"${text}":`}</p>
     <p className="important">Total mentions: {total}</p>
     <p className="detail">
@@ -15,7 +15,7 @@ const TopicDetail = ({ text, total, positive, neutral, negative }) => (
     <p className="detail">
       Negative Mentions: <span className="negative">{negative}</span>
     </p>
-  </>
+  </div>
 );
 
 TopicDetail.defaultProps = {
